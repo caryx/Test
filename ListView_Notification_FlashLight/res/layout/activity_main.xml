@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/jumpToList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="16dp"
+        
+        android:onClick="jumpToListClick"
+        android:text="@string/jumpToList" />
+
+    <Button
+        android:id="@+id/jumpToListView"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/jumpToList"
+        android:layout_alignRight="@+id/jumpToList"
+        android:layout_below="@+id/jumpToList"
+        android:layout_marginTop="14dp"
+        android:onClick="jumpToListViewClick"
+        android:text="jumpToListView" />
+
+    <Button
+        android:id="@+id/addContacts"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/jumpToListView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="17dp"
+        android:onClick="addContactsClick"
+        android:text="addContacts" />
+
+    <Switch
+        android:id="@+id/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:onClick="switchLightClick"
+        android:checked="true"
+        android:text="Light" />
+
+    <Button
+        android:id="@+id/startNofitication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/jumpToList"
+        android:layout_alignBottom="@+id/jumpToList"
+        android:layout_alignParentRight="true"
+        android:onClick="startNotificationClick"
+        android:text="startNofitication" />
+
+    <Button
+        android:id="@+id/cancelNofitication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/jumpToListView"
+        android:layout_alignParentRight="true"
+        android:onClick="cancelNotificationClick"
+        android:text="cancelNofitication" />
+
+    <ProgressBar
+        android:id="@+id/hiddenBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/hiddenBar"
+        android:layout_toLeftOf="@+id/startNofitication"
+        android:layout_toRightOf="@+id/jumpToList" />
+
+</RelativeLayout>
