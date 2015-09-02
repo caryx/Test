@@ -11,22 +11,58 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dip"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="97dp"
         android:text="TextView" />
 
     <Button
         android:id="@+id/create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="createClick"
         android:text="Create" />
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="160dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/create"
+        android:columnWidth="40dip"
+        android:numColumns="auto_fit" >
+    </GridView>
+
     <Button
         android:id="@+id/addData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/gridview"
+        android:layout_centerHorizontal="true"
+        android:onClick="addDataClick"
         android:text="AddData" />
+
+    <Button
+        android:id="@+id/closeDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gridview"
+        android:layout_alignRight="@+id/gridview"
+        android:onClick="closeDBClick"
+        android:text="closeDB" />
+
+    <EditText
+        android:id="@+id/editSQL"
+        android:layout_width="wrap_content"
+        android:layout_height="100dip"
+        android:layout_alignLeft="@+id/gridview"
+        android:layout_alignRight="@+id/gridview"
+        android:layout_below="@+id/gridview"
+        android:text="editSQL"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+    
 </RelativeLayout>
