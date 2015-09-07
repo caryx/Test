@@ -1,6 +1,7 @@
 package com.example.mylistviewtest;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 
 import android.app.Activity;
@@ -28,6 +29,7 @@ import android.provider.ContactsContract.CommonDataKinds.Photo;
 import android.provider.ContactsContract.CommonDataKinds.StructuredName;
 import android.provider.ContactsContract.Data;
 import android.provider.ContactsContract.RawContacts;
+import android.util.Log;
 import android.view.Menu;
 import android.view.SurfaceHolder;
 import android.view.View;
@@ -38,10 +40,6 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
-
-	
-	
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
@@ -68,9 +66,7 @@ public class MainActivity extends Activity {
 		{
 			showBar = bundle.getInt("id");
 		}
-		
-		
-		
+				
 		showBar = intent.getIntExtra("showBar", 0);
 		//int showBar = (int)(intent.getExtras().get("showBar"));
 		//int showBar = intent.getIntExtra("showBar", 0);
@@ -370,6 +366,18 @@ public class MainActivity extends Activity {
 		NotificationManager nManager = (NotificationManager) this.getSystemService(NOTIFICATION_SERVICE);
 		nManager.cancel(1);
 	}
+	
+	public void viewFileClick(View view)
+	{
+		//FileDialog fileDialog = new FileDialog();
+		String path = "\\"; 
+		File fileObj = new File(path);
+		File files [] = fileObj.listFiles();
+		for(File currentFile : files)
+		{
+			Log.e("CaryFile:", currentFile.getName());
+		}
+	}	
 	
 //	private void initCamera(SurfaceHolder surfaceHolder) {
 //		if (surfaceHolder == null) {

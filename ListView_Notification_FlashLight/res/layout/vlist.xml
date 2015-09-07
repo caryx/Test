@@ -29,8 +29,8 @@
         android:id="@+id/textUsrAddr"
         android:layout_width="60dp"
         android:layout_height="fill_parent"
-        android:text="app_addr"
-        android:textSize="@dimen/activity_font_size"
+        android:text="app_addr2"
+        android:textSize="@dimen/activity_font_size_large"
         android:gravity="left"        
         android:singleLine="true"
     />

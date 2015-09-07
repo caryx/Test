@@ -5,7 +5,7 @@
     <dimen name="activity_vertical_margin">1dp</dimen>
     
     <dimen name="activity_font_size">12pt</dimen>
-    
+    <dimen name="activity_font_size_large">16pt</dimen>
     <dimen name="activity_column_height">24sp</dimen>
 
 </resources>
